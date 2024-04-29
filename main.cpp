@@ -66,16 +66,26 @@ Node* pop(Node *head) {
     return finalNode;
 }
 
+int sum(Node *head) {
+    int sum = 0;
+    Node *current = head;
+    while(current != NULL) {
+        sum = sum + current->a;
+        current = current->next;
+    }
+    return sum;
+}
+
 
 int main()
 {
-    Node *node = new Node(0);
+    Node *root = new Node(0);
 
-    ajouter(&node,1);
-    ajouter(&node,15);
-    ajouterDebut(&node,-1);
-    Node *fn = pop(node);
-    cout<<fn->a;
+    ajouter(&root,1);
+    ajouter(&root,15);
+    ajouterDebut(&root,-1);
+    Node *fn = pop(root);
+    cout<<sum(root);
     //afficherTous(node);
 
     return 0;
