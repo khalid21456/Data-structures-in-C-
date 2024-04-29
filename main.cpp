@@ -8,6 +8,7 @@ public :
     Node *next;
     Node (int a) {
         this->a = a;
+        next = NULL;
     }
 
     void afficherA() {
@@ -20,11 +21,45 @@ public :
 
 };
 
+Node* createNode(int val) {
+    Node *node = new Node(val);
+    return node;
+}
+
+Node* findLast(Node *head) {
+    Node *current = head;
+    while(current->next != NULL) {
+        current = current->next;
+    }
+    return current;
+}
+
+void afficherTous(Node *head) {
+    Node *current = head;
+    while(current != NULL) {
+        cout<<current->a<<"    ";
+        current = current->next;
+    }
+}
+
+void ajouter(Node **head, int val) {
+    Node *node = createNode(val);
+    if(*head == NULL) {
+        *head = node;
+    }else {
+        findLast(*head)->next = node;
+    }
+}
+
+
 int main()
 {
-    Node *node = new Node(5);
+    Node *node = new Node(0);
 
-    node->afficherA();
+    ajouter(&node,1);
+    ajouter(&node,15);
+
+    afficherTous(node);
 
     return 0;
 }
