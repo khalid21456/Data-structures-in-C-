@@ -61,6 +61,11 @@ void ajouterDebut(Node **head, int val) {
     }
 }
 
+Node* pop(Node *head) {
+    Node *finalNode = findLast(head);
+    return finalNode;
+}
+
 
 int main()
 {
@@ -69,7 +74,9 @@ int main()
     ajouter(&node,1);
     ajouter(&node,15);
     ajouterDebut(&node,-1);
-    afficherTous(node);
+    Node *fn = pop(node);
+    cout<<fn->a;
+    //afficherTous(node);
 
     return 0;
 }
