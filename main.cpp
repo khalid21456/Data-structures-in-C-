@@ -51,6 +51,16 @@ void ajouter(Node **head, int val) {
     }
 }
 
+void ajouterDebut(Node **head, int val) {
+    Node *node = createNode(-1);
+    if(*head == NULL) {
+        *head = node;
+    }else {
+        node->next = *head;
+        *head = node;
+    }
+}
+
 
 int main()
 {
@@ -58,7 +68,7 @@ int main()
 
     ajouter(&node,1);
     ajouter(&node,15);
-
+    ajouterDebut(&node,-1);
     afficherTous(node);
 
     return 0;
