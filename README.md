@@ -17,6 +17,7 @@ Advantages:
 Dynamic Size: Linked lists can grow or shrink in size dynamically, as memory is allocated and deallocated on demand.
 Efficient Insertion and Deletion: Insertion and deletion operations can be performed quickly and efficiently, especially when dealing with large lists, as they involve adjusting pointers rather than shifting elements like in arrays.
 Memory Efficiency: Linked lists only use as much memory as necessary to store the elements and pointers, without the need for pre-allocation.
+
 Disadvantages:
 
 Sequential Access: Unlike arrays, linked lists do not provide direct access to elements by index. Accessing an element in a linked list requires traversing the list from the beginning.
