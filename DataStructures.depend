@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1714423880 source:c:\users\khalid\documents\projet c++\datastructures\main.cpp
+	<iostream>
+
+1714424678 source:c:\users\khalid\documents\projet c++\datastructures\stack.cpp
+	<iostream>
+
+1714425015 source:c:\users\khalid\documents\projet c++\datastructures\myclass.cpp
+	<iostream>
+
